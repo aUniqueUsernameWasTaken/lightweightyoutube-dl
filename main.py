@@ -6,10 +6,8 @@ from pytube import YouTube
 # Download Function
 
 def startDownload():
-
-
+    status.configure(text='Downloading..')
     if audioorvideo.get() == "MP4":
-        status.configure(text='Downloading..')
         try:
             ytLink = link.get()
             ytObject = YouTube(ytLink, on_progress_callback=findprecentage)
@@ -20,11 +18,10 @@ def startDownload():
         except:
             status.configure(text='Link Invalid!', text_color="red")
     else:
-        status.configure(text='Downloading..')
         try:
             ytLink = link.get()
             ytObject = YouTube(ytLink, on_progress_callback=findprecentage)
-            video = ytObject.streams.get_highest_resolution()
+            video = ytObject.streams.get_audio_only()
             video.download()
             status.configure(text='Download Complete!', text_color="lime")
             title.configure(text="Title: "+ytObject.title)
