@@ -1,7 +1,7 @@
-## DEPENDENCIES
-# - customtkinter
-# - tkinter
-# - pytube
+# DEPENDENCIES
+### - customtkinter
+### - tkinter
+### - pytube
 
 ![Main Product](https://i.imgur.com/4MclIid.png)
 
