@@ -1,5 +1,6 @@
 import tkinter
 import customtkinter
+import conf
 from pytube import YouTube
 
 
@@ -12,7 +13,7 @@ def startDownload():
             ytLink = link.get()
             ytObject = YouTube(ytLink, on_progress_callback=findprecentage)
             video = ytObject.streams.get_highest_resolution()
-            video.download()
+            video.download(conf.final_dir)
             status.configure(text='Download Complete!', text_color="lime")
             title.configure(text="Title: "+ytObject.title)
         except:
@@ -22,7 +23,7 @@ def startDownload():
             ytLink = link.get()
             ytObject = YouTube(ytLink, on_progress_callback=findprecentage)
             video = ytObject.streams.get_audio_only()
-            video.download()
+            video.download(conf.final_dir)
             status.configure(text='Download Complete!', text_color="lime")
             title.configure(text="Title: "+ytObject.title)
         except:
