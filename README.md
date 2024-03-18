@@ -12,7 +12,8 @@ To use is pretty simple, you launch it up by executing it and then everything el
 ## Change Final Directory:
 
 Open up `conf.py` and edit the following line:
- `final_dir = "put/the/path/you/want/here"`
+
+`final_dir = "put/the/path/you/want/here"`
 
  And yeah thats pretty much it!
 
