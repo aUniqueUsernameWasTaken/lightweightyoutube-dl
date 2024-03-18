@@ -1,4 +1,4 @@
-![Main Product](https://imgur.com/a/RPAflYh)
+![Main Product](https://i.imgur.com/4MclIid.png)
 
 How to use:
 
